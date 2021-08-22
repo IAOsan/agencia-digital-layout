@@ -1,0 +1,20 @@
+mixin service-card(icon="fa-paint-brush", title="titulo", url="#")
+   h3.font-weight-bold
+      i.icon.d-block.mb-3(class=icon aria-hidden="true")
+      span #{title}
+   if block
+      p.mt-5.mb-5 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut sit cumque porro ea odio eius, veniam ab consectetur incidunt at laborum nihil commodi facere earum, eos id asperiores consequuntur dolorum.
+   else 
+      p.mt-5.mb-5 SIN DESCRIPCION
+   a.btn.btn-success(href=url) Ver más
+      i.fas.fa-arrow-circle-right.ml-2(aria-hidden="true")
+mixin gallery(...images)
+   .row.no-gutters
+      each image,index in images
+         .col-md-3
+            a(href="#" data-toggle="modal" data-target=`#imagen-${index+1}`)
+               img.img-fluid(src=`assets/img/${image}`, alt="")
+            .modal.fade(id=`imagen-${index+1}` tabindex="-1" aria-hidden="true")
+               .modal-dialog.modal-dialog-centered.modal-lg
+                  .modal-content
+                     img.img-fluid(src=`assets/img/${image}`, alt="")

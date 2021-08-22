@@ -1,0 +1,51 @@
+extends ./pug/templates/template
+block home
+   main
+      #inicio.jumbotron.text-white.text-center.m-0.hero
+         .row.h-100.align-items-end.pb-5
+            .col
+               h1.display-4
+                  strong Creatividad sin Límites
+               p.lead Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi expedita hic fugiat sunt facilis soluta commodi animi, quisquam in maxime?
+               a.btn.btn-primary.btn-lg(href="#") Más información
+      #intro.about-us
+         .container.py-5
+            .row
+               .col-md-6.py-3.text-center.text-lg-left
+                  h2.font-weight-bold.mb-5 Agencia Digital encargada de la presencia digital de su empresa
+                  p.mb-5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, nesciunt laboriosam cupiditate laborum, vel enim ad totam doloremque repudiandae sit accusamus reiciendis. Aut vel temporibus quibusdam iusto id amet illo.
+                  a.btn.btn-outline-primary.btn-lg(href="#") Más información
+               .col-md-6.bg-img
+      #banner.bg-danger.text-white.text-center.py-5
+         .container
+            h2.h1.font-weight-bold.mb-5 Impulsa Tu Empresa o Negocio
+            p.mb-5 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit vero vitae recusandae quia asperiores dolor odio odit obcaecati culpa accusantium harum ex molestias explicabo consectetur, enim fuga nulla ratione impedit.
+            a.btn.btn-light.btn-lg(href="#") Más información
+      #servicios.services
+         .container.text-center.py-5
+            h2.h1.font-weight-bold.mb-5 Nuestros Servicios
+            .row
+               .col-md-4.mb-5.mb-md-0
+                  +service-card('fas fa-paint-brush', 'Diseño')
+                     p.mt-5.mb-5 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut sit cumque porro ea odio eius, veniam ab consectetur incidunt at laborum nihil commodi facere earum, eos id asperiores consequuntur dolorum.
+               .col-md-4.mb-5.mb-md-0
+                  +service-card('fas fa-search-dollar', 'SEO')
+                     p.mt-5.mb-5 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut sit cumque porro ea odio eius, veniam ab consectetur incidunt at laborum nihil commodi facere earum, eos id asperiores consequuntur dolorum.
+               .col-md-4
+                  +service-card('fas fa-bullhorn', 'Marketing')
+                     p.mt-5.mb-5 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut sit cumque porro ea odio eius, veniam ab consectetur incidunt at laborum nihil commodi facere earum, eos id asperiores consequuntur dolorum.
+      #galeria.gallery.my-4
+         .container-fluid.p-0
+            +gallery('galeria-1.jpeg','galeria-2.jpeg','galeria-3.jpeg', 'galeria-4.jpeg')
+      #testimonios.container.py-5
+         h2.h1.text-center.font-weight-bold.mb-5 Testimonios
+         .row
+            .col-md-6
+               blockquote.blockquote.text-center.py-5.border
+                  p.mb-0 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta est laudantium quidem adipisci reiciendis sed minima expedita sunt?
+                  footer.blockquote-footer.font-weight-bold Jon Doe
+            .col-md-6
+               blockquote.blockquote.text-center.py-5.border
+                  p.mb-0 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta est laudantium quidem adipisci reiciendis sed minima expedita sunt?
+                  footer.blockquote-footer.font-weight-bold Jane Doe
+   

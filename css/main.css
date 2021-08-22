@@ -1,0 +1,73 @@
+/* -------------------------------------------------------------------------- */
+/*                                   mixins                                   */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                  variables                                 */
+/* -------------------------------------------------------------------------- */
+:root {
+  --c-dark: #0f044c;
+  --c-red: #df2e2e;
+  --c-green: #01937c;
+  --c-green-d: #00705f;
+  --f-main: "Raleway", sans-serif;
+  --border: 2px solid red;
+  --transition-s: all 500ms;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    base                                    */
+/* -------------------------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--f-main);
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.bg-dark {
+  background-color: var(--c-dark) !important;
+}
+
+.bg-danger {
+  background-color: var(--c-red) !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 components                                 */
+/* -------------------------------------------------------------------------- */
+.btn-success {
+  background-color: var(--c-green) !important;
+}
+.btn-success:active, .btn-success:focus, .btn-success:hover {
+  background-color: var(--c-green-d) !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    home                                    */
+/* -------------------------------------------------------------------------- */
+.hero {
+  background-color: #333;
+  margin-top: 6.25rem;
+  height: 43rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/img/adults-analysis-banking-1451447.jpg") top center no-repeat;
+  background-size: cover;
+}
+
+.about-us .bg-img {
+  height: 20rem;
+  background: url("../assets/img/blurred-background-coffee-cup-contemporary-908284.jpg") center no-repeat;
+  background-size: cover;
+}
+@media only screen and (min-width: 48em) {
+  .about-us .bg-img {
+    height: auto;
+    background-size: contain;
+  }
+}
+
+.services .icon {
+  font-size: 2rem;
+}
